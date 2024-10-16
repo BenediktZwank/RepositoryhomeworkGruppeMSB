@@ -5,6 +5,7 @@ public class Main {
         System.out.println("W");
 
         //Digga ich muss hier gerade ausprobieren ja, deswegen schreibe ich hier etwas unnötiges
+        //Das hab ich jz in meiner Branch "Mike" geschrieben, ist das jz in der Main wenn ich merge oder pushe?
 
     }
 }
