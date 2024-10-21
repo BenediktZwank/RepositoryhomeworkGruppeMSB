@@ -5,5 +5,7 @@ public class Main {
         System.out.println("W");
 //Sharon probiert nur was aus
         //okay
+        System.out.println("SHAron der Bossssssssss");
+
     }
 }
