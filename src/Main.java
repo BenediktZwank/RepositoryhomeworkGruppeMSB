@@ -3,7 +3,11 @@ public class Main {
 
         System.out.println("Hello fertige Brancherstellung!");
         System.out.println("W");
+        int x = 0;
+        if(x > 1) {
+            // mach gar nix
+        }
 //Sharon probiert nur was aus
-        //okay
+
     }
 }
