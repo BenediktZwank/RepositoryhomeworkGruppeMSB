@@ -1,6 +1,6 @@
 public class Lecture extends Course{
 
-    public Lecture(int courseId, String courseName) {
+    public Lecture(String courseId, String courseName) {
         super(courseId, courseName);
     }
 

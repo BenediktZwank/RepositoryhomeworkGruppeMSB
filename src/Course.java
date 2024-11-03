@@ -1,14 +1,14 @@
 public class Course {
 
-    private int courseId;
+    private String courseId;
     private String courseName;
 
-    public Course(int courseId, String courseName) {
+    public Course(String courseId, String courseName) {
         this.courseId = courseId;
         this.courseName = courseName;
     }
 
-    public int getCourseId() {
+    public String getCourseId() {
         return courseId;
     }
 

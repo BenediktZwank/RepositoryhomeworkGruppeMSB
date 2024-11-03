@@ -1,10 +1,10 @@
 public class User {
 
-    private int userId;
+    private String userId;
     private String firstName;
     private String lastName;
 
-    public User(int userId, String firstName, String lastName) {
+    public User(String userId, String firstName, String lastName) {
         this.userId = userId;
         this.firstName = firstName;
         this.lastName = lastName;
@@ -14,11 +14,11 @@ public class User {
         //log into the System
     }
 
-    public int getUserId() {
+    public String getUserId() {
         return userId;
     }
 
-    public void setUserId(int userId) {
+    public void setUserId(String userId) {
         this.userId = userId;
     }
 
