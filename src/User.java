@@ -10,6 +10,10 @@ public class User {
         this.lastName = lastName;
     }
 
+    public void logIn(){
+        //log into the System
+    }
+
     public int getUserId() {
         return userId;
     }

@@ -4,4 +4,7 @@ public class Student extends User {
         super(userId, firstName, lastName);
     }
 
+    public void register(){
+        //register to a given set of courses
+    }
 }
