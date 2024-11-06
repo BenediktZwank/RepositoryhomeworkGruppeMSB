@@ -1,3 +1,5 @@
+package code;
+
 public class Main {
     public static void main(String[] args) {
         // Beispiel-Entitäten erstellen
@@ -5,18 +7,18 @@ public class Main {
         Student student2 = new Student("S2", "Bob", "Meyer");
         Lecturer lecturer1 = new Lecturer("L1","Max" ,"Prof. Smith");
 
-        // EntityManager für Studenten
+        // code.EntityManager für Studenten
         EntityManager<Student> studentManager = new EntityManager<>();
         studentManager.addEntity(student1);
         studentManager.addEntity(student2);
 
-        // EntityManager für Dozenten
+        // code.EntityManager für Dozenten
         EntityManager<Lecturer> lecturerManager = new EntityManager<>();
         lecturerManager.addEntity(lecturer1);
 
         // Beispielsuche: Suche einen Studenten mit einer bestimmten ID
         Student foundStudent = studentManager.findEntityByCriterion(student -> student.getUserId().equals("S1"));
-        System.out.println("Gefundener Student: " + (foundStudent != null ? foundStudent.getLastName() : "nicht gefunden"));
+        System.out.println("Gefundener code.Student: " + (foundStudent != null ? foundStudent.getLastName() : "nicht gefunden"));
 
         // Beispielsuche: Suche einen Dozenten mit einem bestimmten Namen
         Lecturer foundLecturer = lecturerManager.findEntityByCriterion(lecturer -> lecturer.getLastName().equals("Prof. Smith"));

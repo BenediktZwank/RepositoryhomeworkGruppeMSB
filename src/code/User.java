@@ -1,3 +1,5 @@
+package code;
+
 public class User {
 
     private String userId;

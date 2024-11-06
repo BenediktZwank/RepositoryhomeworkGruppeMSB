@@ -1,3 +1,5 @@
+package code;
+
 public class Student extends User {
 
     public Student(String userId, String firstName, String lastName) {
