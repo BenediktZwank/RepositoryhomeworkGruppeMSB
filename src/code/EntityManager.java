@@ -9,14 +9,17 @@ public class EntityManager<T> {
     private List<T> entities;
 
     public EntityManager(){
+
         this.entities = new ArrayList<>();
     }
 
     public void addEntity(T data){
+
         entities.add(data);
     }
 
     public List<T> getAllEntities(){
+
         return entities;
     }
 
