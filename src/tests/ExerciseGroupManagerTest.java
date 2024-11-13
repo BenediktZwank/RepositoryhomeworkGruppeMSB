@@ -48,4 +48,7 @@ public class ExerciseGroupManagerTest {
         assertEquals(100, exerciseGroupManagerTest.checkGroupCapacaties(100, 20, 0));
     } //Es sollten 100 Studenten übrig bleiben
 
+
+
+
 }
