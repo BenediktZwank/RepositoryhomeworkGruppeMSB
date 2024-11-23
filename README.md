@@ -8,8 +8,11 @@ Benedikt Zwank 7407699
 | ----------- | -------- | -------- | -------- | -------- | -------- | -------- |
 | Homework 01 | 4/4      | 5/6      | 2.25/5   | 3.75/5   | -        | 15/20    |
 | Homework 02 | 3.25/4.5 | 4/4.5    | 5.25/6   | 5/5      | -        | 17.5/20  |
+| Homework 04 | 4.25/5   | 4.75/5   | 3.75/7   | 2.5/3    | -        | 15.25/20 |
 
 ### Erläuterungen zur Bewertung
+
+HW04: Siehe Bemerkungen im Ordner *Correction Files*.
 
 HW02:
 - Ex. 1: "Lane 3" richtig benennen. Fehlende Beschriftung der Branches (Boolean Expressions an Pfeilen). Der Adjustment-Branch müsste nicht zu "Enter Times" sondern noch etwas früher nämlich vor den Fork wieder zurückführen. Dort sollte dann auch der fehlende Merge-Knoten vom Branching hin. Spielt euer Diagramm mal so wie in VL 5 mit dem wandernden blauen Punkt durch, um zu sehen, was passiert, wenn ihr einen Quereinstieg in den Fork macht, und beachtet dabei die unterste Regel auf Folie 21.
