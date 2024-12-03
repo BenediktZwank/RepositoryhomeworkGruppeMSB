@@ -7,6 +7,7 @@ public class CourseManager {
 
     private ArrayList<String> courses;
 
+
     public CourseManager() {
 
         this.courses = new ArrayList<>();
