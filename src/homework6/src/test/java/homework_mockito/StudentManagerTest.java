@@ -1,7 +1,12 @@
 package homework6.src.test.java.homework_mockito;
 
+import homework6.src.main.java.homework_mockito.Course;
+import homework6.src.main.java.homework_mockito.ExerciseGroup;
+import homework6.src.main.java.homework_mockito.Student;
+import homework6.src.main.java.homework_mockito.StudentManager;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.mockito.Mock;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -9,10 +14,22 @@ import java.util.Map;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-public class StudentManagerTest {
+public class StudentManagerTest  {
+
+
 
     private StudentManager studentManager;
     private List<Course> courses;
+
+    @Mock
+    private Course mockCourse;
+
+    @Mock
+    private ExerciseGroup mockGroup1;
+
+    @Mock
+    private ExerciseGroup mockGroup2;
+
 
     @BeforeEach
     public void setup() {
@@ -25,12 +42,14 @@ public class StudentManagerTest {
         // Arrange
         Student student1 = new Student("Alice", "A123");
         Student student2 = new Student("Bob", "B456");
-        ExerciseGroup group1 = new ExerciseGroup("Group 1", List.of(student1));
-        ExerciseGroup group2 = new ExerciseGroup("Group 2", List.of(student2));
-        Course course = new Course("Software Engineering", List.of(group1, group2));
+
+         mockGroup1 =  new ExerciseGroup("Group 1", List.of(student1));
+
+         mockGroup2 = new ExerciseGroup("Group 2", List.of(student2));
+        Course mockCourse = new Course("Software Engineering", List.of(mockGroup1, mockGroup2));
 
         // Act
-        courses.add(course);
+        courses.add(mockCourse);
         Map<String, List<String>> distribution = studentManager.generateStudentDistribution("Software Engineering");
 
         // Assert
