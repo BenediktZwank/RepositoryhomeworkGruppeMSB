@@ -1,4 +1,4 @@
-package code;
+package homework3;
 
 public class Lecture extends Course {
 
