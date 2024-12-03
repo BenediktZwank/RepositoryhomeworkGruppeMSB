@@ -18,4 +18,7 @@ public class Course {
     public List<ExerciseGroup> getExerciseGroups() {
         return exerciseGroups;
     }
+
+
+
 }
