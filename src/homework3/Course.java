@@ -3,6 +3,7 @@ package homework3;
 public class Course {
 
     private String courseId;
+
     private String courseName;
 
     public Course(String courseId, String courseName) {
