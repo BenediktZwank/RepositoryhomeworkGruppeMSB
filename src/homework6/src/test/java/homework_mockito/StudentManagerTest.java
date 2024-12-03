@@ -6,6 +6,8 @@ import homework6.src.main.java.homework_mockito.Student;
 import homework6.src.main.java.homework_mockito.StudentManager;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.mockito.Mock;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
@@ -44,10 +46,10 @@ public class StudentManagerTest  {
          mockGroup1 =  new ExerciseGroup("Group 1", List.of(student1));
 
          mockGroup2 = new ExerciseGroup("Group 2", List.of(student2));
-        Course mockCourse = new Course("Software Engineering", List.of(group1, group2));
+        Course mockCourse = new Course("Software Engineering", List.of(mockGroup1, mockGroup2));
 
         // Act
-        courses.add(course);
+        courses.add(mockCourse);
         Map<String, List<String>> distribution = studentManager.generateStudentDistribution("Software Engineering");
 
         // Assert
