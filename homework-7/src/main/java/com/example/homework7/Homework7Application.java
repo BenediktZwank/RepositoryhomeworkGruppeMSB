@@ -7,6 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class Homework7Application {
 
     public static void main(String[] args) {
+
         SpringApplication.run(Homework7Application.class, args);
     }
 
