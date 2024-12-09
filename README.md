@@ -8,11 +8,18 @@ Benedikt Zwank 7407699
 | ----------- | -------- | -------- | -------- | -------- | -------- | -------- |
 | Homework 01 | 4/4      | 5/6      | 2.25/5   | 3.75/5   | -        | 15/20    |
 | Homework 02 | 3.25/4.5 | 4/4.5    | 5.25/6   | 5/5      | -        | 17.5/20  |
+| Homework 03 | 6/8      | 5.25/5.5 | 5.25/6.5 | -        | -        | 16.5/20  |
 | Homework 04 | 4.25/5   | 4.75/5   | 3.75/7   | 2.5/3    | -        | 15.25/20 |
 
 ### Erläuterungen zur Bewertung
 
 HW04: Siehe Bemerkungen im Ordner *Correction Files*.
+
+HW03:
+- Ex. 1 a): Siehe Bemerkungen im Ordner *Correction Files*.
+- Ex. 1 b): Die ganzen Associations wurden nicht umgesetzt \[-0.75p\]. Die Methoden register() und manageCourses() hätte man durchaus umsetzen können, indem das als Eingabeparameter angenommene Course-Objekt in eine entsprechende Liste hinzugefügt wird, die die jeweiligen Kurse verwaltet \[-0.5p\].
+- Ex. 2: Achtung: Das Kriterium, nach dem die Liste entities durchsucht werden soll, muss nicht eindeutig sein. In dem Fall gibt findEntityByCriterion() aktuell aber nur das erste gefundene Objekt zurück \[-0.25p\].
+- Ex. 3: Das Objekt, auf dem die Methode checkGroupCapacaties() aufgerufen wird, sollte von der Klasse ExerciseGroupManager und nicht ExerciseGroupManagerTest sein \[-0.25p\]. Dieses besser in einer @BeforeEach-Methode initialisieren. Der letzte Test ist falsch - in dem Fall wird eine Exception geworfen \[-1p\].
 
 HW02:
 - Ex. 1: "Lane 3" richtig benennen. Fehlende Beschriftung der Branches (Boolean Expressions an Pfeilen). Der Adjustment-Branch müsste nicht zu "Enter Times" sondern noch etwas früher nämlich vor den Fork wieder zurückführen. Dort sollte dann auch der fehlende Merge-Knoten vom Branching hin. Spielt euer Diagramm mal so wie in VL 5 mit dem wandernden blauen Punkt durch, um zu sehen, was passiert, wenn ihr einen Quereinstieg in den Fork macht, und beachtet dabei die unterste Regel auf Folie 21.
