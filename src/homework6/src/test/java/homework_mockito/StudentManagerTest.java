@@ -1,72 +1,85 @@
-package homework6.src.test.java.homework_mockito;
+package homework_mockito;
+
+import homework6.src.main.java.homework_mockito.StudentManager;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import org.mockito.Mock;
+import org.mockito.Mockito;
+import org.mockito.MockitoAnnotations;
+
+import java.util.List;
+import java.util.Map;
+
+import static org.junit.jupiter.api.Assertions.*;
+import static org.mockito.Mockito.*;
 
 import homework6.src.main.java.homework_mockito.Course;
 import homework6.src.main.java.homework_mockito.ExerciseGroup;
 import homework6.src.main.java.homework_mockito.Student;
 import homework6.src.main.java.homework_mockito.StudentManager;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
-import org.mockito.Mock;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
-
-import static org.junit.jupiter.api.Assertions.*;
-
-public class StudentManagerTest  {
-
-
+public class StudentManagerTest {
 
     private StudentManager studentManager;
-    private List<Course> courses;
 
     @Mock
-    private Course mockCourse;
-
-    @Mock
-    private ExerciseGroup mockGroup1;
-
-    @Mock
-    private ExerciseGroup mockGroup2;
-
+    private List<Course> mockCourses;
 
     @BeforeEach
     public void setup() {
-        courses = new ArrayList<>();
-        studentManager = new StudentManager(null, courses); // Students are not used directly here
+        MockitoAnnotations.openMocks(this);
+        studentManager = new StudentManager(null, mockCourses); // Mock external components
     }
 
     @Test
     public void testGenerateStudentDistribution_Success() {
         // Arrange
+        String courseName = "Software Engineering";
+        String groupName1 = "Group 1";
+        String groupName2 = "Group 2";
+
         Student student1 = new Student("Alice", "A123");
         Student student2 = new Student("Bob", "B456");
 
-         mockGroup1 =  new ExerciseGroup("Group 1", List.of(student1));
+        ExerciseGroup group1 = mock(ExerciseGroup.class);
+        ExerciseGroup group2 = mock(ExerciseGroup.class);
 
-         mockGroup2 = new ExerciseGroup("Group 2", List.of(student2));
-        Course mockCourse = new Course("Software Engineering", List.of(mockGroup1, mockGroup2));
+        when(group1.getGroupName()).thenReturn(groupName1);
+        when(group2.getGroupName()).thenReturn(groupName2);
+
+        when(group1.getStudents()).thenReturn(List.of(student1));
+        when(group2.getStudents()).thenReturn(List.of(student2));
+
+        Course mockCourse = mock(Course.class);
+        when(mockCourse.getName()).thenReturn(courseName);
+        when(mockCourse.getExerciseGroups()).thenReturn(List.of(group1, group2));
+
+        when(mockCourses.stream())
+                .thenReturn(List.of(mockCourse).stream());
 
         // Act
-        courses.add(mockCourse);
-        Map<String, List<String>> distribution = studentManager.generateStudentDistribution("Software Engineering");
+        Map<String, List<String>> distribution = studentManager.generateStudentDistribution(courseName);
 
         // Assert
         assertEquals(2, distribution.size());
-        assertTrue(distribution.containsKey("Group 1"));
-        assertTrue(distribution.containsKey("Group 2"));
-        assertEquals(List.of("Alice (A123)"), distribution.get("Group 1"));
-        assertEquals(List.of("Bob (B456)"), distribution.get("Group 2"));
+        assertTrue(distribution.containsKey(groupName1));
+        assertTrue(distribution.containsKey(groupName2));
+        assertEquals(List.of("Alice (A123)"), distribution.get(groupName1));
+        assertEquals(List.of("Bob (B456)"), distribution.get(groupName2));
     }
 
     @Test
     public void testGenerateStudentDistribution_CourseNotFound() {
-        //Arrange
-        Course course = new Course("Object-Oriented Software Engineering", List.of());
         // Arrange
-        courses.add(course);
+        String courseName = "Software Engineering";
+
+        Course mockCourse = mock(Course.class);
+        when(mockCourse.getName()).thenReturn("Different Course");
+
+        when(mockCourses.stream())
+                .thenReturn(List.of(mockCourse).stream());
+
         // Act & Assert
-        assertThrows(IllegalArgumentException.class, () -> studentManager.generateStudentDistribution("Software Engineering"));
+        assertThrows(IllegalArgumentException.class, () -> studentManager.generateStudentDistribution(courseName));
     }
 }
