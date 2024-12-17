@@ -9,5 +9,7 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="junit.jupiter.api1" level="project" />
     <orderEntry type="library" name="junit.jupiter.params" level="project" />
+    <orderEntry type="library" name="mockito.all" level="project" />
+    <orderEntry type="library" name="codeborne.replay.framework" level="project" />
   </component>
 </module>
