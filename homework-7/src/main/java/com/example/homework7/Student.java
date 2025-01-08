@@ -2,7 +2,8 @@ package com.example.homework7;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
-//Test
+
+//Änderung um zu Pushen
 @Entity
 public class Student {
 
@@ -44,3 +45,5 @@ public class Student {
         this.subject = subject;
     }
 }
+
+//Push zum Testen und gucken ob bei MSB sichtbar
