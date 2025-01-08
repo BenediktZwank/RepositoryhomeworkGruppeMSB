@@ -10,10 +10,11 @@ Benedikt Zwank 7407699
 | Homework 02 | 3.25/4.5 | 4/4.5    | 5.25/6   | 5/5      | -        | 17.5/20  |
 | Homework 03 | 6/8      | 5.25/5.5 | 5.25/6.5 | -        | -        | 16.5/20  |
 | Homework 04 | 4.25/5   | 4.75/5   | 3.75/7   | 2.5/3    | -        | 15.25/20 |
+| Homework 05 | 5/5      | 5.25/7   | 4/8      | -        | -        | 14.25/20 |
 
 ### Erläuterungen zur Bewertung
 
-HW04: Siehe Bemerkungen im Ordner *Correction Files*.
+HW04, HW05: Siehe Bemerkungen im Ordner *Correction Files*.
 
 HW03:
 - Ex. 1 a): Siehe Bemerkungen im Ordner *Correction Files*.
