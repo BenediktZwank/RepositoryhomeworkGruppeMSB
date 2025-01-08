@@ -2,8 +2,7 @@ package com.example.homework7;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
-
-//Änderung um zu Pushen
+//Test
 @Entity
 public class Student {
 

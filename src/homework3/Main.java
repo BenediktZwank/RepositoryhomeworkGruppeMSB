@@ -24,5 +24,6 @@ public class Main {
         Lecturer foundLecturer = lecturerManager.findEntityByCriterion(lecturer -> lecturer.getLastName().equals("Prof. Smith"));
         System.out.println("Gefundener Dozent: " + (foundLecturer != null ? foundLecturer.getLastName() : "nicht gefunden"));
 
+        //Push um Workflow auszulösen
     }
 }
