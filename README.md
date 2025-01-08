@@ -11,8 +11,13 @@ Benedikt Zwank 7407699
 | Homework 03 | 6/8      | 5.25/5.5 | 5.25/6.5 | -        | -        | 16.5/20  |
 | Homework 04 | 4.25/5   | 4.75/5   | 3.75/7   | 2.5/3    | -        | 15.25/20 |
 | Homework 05 | 5/5      | 5.25/7   | 4/8      | -        | -        | 14.25/20 |
+| Homework 06 | 6.5/8    | 7/8      | 4/4      | -        | -        | 17.5/20  |
 
 ### Erläuterungen zur Bewertung
+
+HW06:
+- Ex. 1: Die Methode checkGroupCapacities() müsste auf einem ExerciseGroupManager-Objekt und nicht, wie in Zeile 16 initialisiert, einem ExerciseGroupManagerTest-Objekt aufgerufen werden \[-0.25p\]. Typo im Methodennamen checkGroupCapacities() \[-0.25p\]. Die Testfälle 8 und 9 aus HW05 Ex. 2 wurden nicht mit den Eingabeparametern getestet, die ihr in eurer Tabelle angegeben hattet \[-1p\].
+- Ex. 2 a): Fehlende Mocks für die Student-Objekte und die darauf in generateStudentDistribution() aufgerufenen Methoden \[-1p\].
 
 HW04, HW05: Siehe Bemerkungen im Ordner *Correction Files*.
 
