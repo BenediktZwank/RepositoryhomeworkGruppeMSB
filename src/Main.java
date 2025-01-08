@@ -4,7 +4,7 @@ public class Main {
         System.out.println("Hello fertige Brancherstellung!");
         System.out.println("W");
 
-        //Digga ich muss hier gerade ausprobieren ja, deswegen schreibe ich hier etwas unnötiges
+        //Push um Workflow auszulösen
 
     }
 }
