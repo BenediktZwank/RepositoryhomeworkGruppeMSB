@@ -1,4 +1,4 @@
-name: Java CI with Maven
+name: CI/CD for Homework-7
 
 on:
   push:
@@ -10,41 +10,43 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # 1. Checkout the code
+      # Schritt 1: Checke den Code aus
       - name: Checkout code
         uses: actions/checkout@v3
+        with:
+          path: homework-7
 
-      # 2. Set up JDK 23
+      # Schritt 2: Setup JDK 23
       - name: Set up JDK 23
         uses: actions/setup-java@v3
         with:
           java-version: '23'
           distribution: 'temurin'
 
-      # 3. Cache Maven dependencies
+      # Schritt 3: Cache Maven dependencies
       - name: Cache Maven dependencies
         uses: actions/cache@v3
         with:
-          path: ~/.m2/repository
-          key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
+          path: ~/.m2
+          key: ${{ runner.os }}-maven-${{ hashFiles('**/homework-7/pom.xml') }}
           restore-keys: |
-            ${{ runner.os }}-maven-
+            ${{ runner.os }}-maven
 
-      # 4. Install Maven dependencies
+      # Schritt 4: Install dependencies
       - name: Install dependencies
-        run: mvn install --no-transfer-progress
+        run: mvn -f homework-7/pom.xml dependency:resolve
 
-      # 5. Run tests
+      # Schritt 5: Run tests
       - name: Run tests
-        run: mvn test --no-transfer-progress
+        run: mvn -f homework-7/pom.xml test
 
-      # 6. Generate JaCoCo test coverage report
+      # Schritt 6: Generate JaCoCo test coverage
       - name: Generate JaCoCo test coverage
-        run: mvn jacoco:report
+        run: mvn -f homework-7/pom.xml jacoco:report
 
-      # 7. Upload test coverage as an artifact
+      # Schritt 7: Upload JaCoCo coverage report
       - name: Upload JaCoCo coverage report
         uses: actions/upload-artifact@v3
         with:
           name: jacoco-coverage-report
-          path: target/site/jacoco
+          path: homework-7/target/site/jacoco
