@@ -12,8 +12,13 @@ Benedikt Zwank 7407699
 | Homework 04 | 4.25/5   | 4.75/5   | 3.75/7   | 2.5/3    | -        | 15.25/20 |
 | Homework 05 | 5/5      | 5.25/7   | 4/8      | -        | -        | 14.25/20 |
 | Homework 06 | 6.5/8    | 7/8      | 4/4      | -        | -        | 17.5/20  |
+| Homework 07 | 4/4      | 3.75/4   | 8/8      | 2/4      | -        | 17.75/20 |
 
 ### Erläuterungen zur Bewertung
+
+HW07:
+- Ex. 2 a): Java ist case-sensitive und JPA erwartet hier eine `@Id`-Annotation, nicht `@ID` \[-0.25p\].
+- Ex. 4: Screenshots von den Anfragen an die anderen beiden Endpoints fehlen \[-2p\].
 
 HW06:
 - Ex. 1: Die Methode checkGroupCapacities() müsste auf einem ExerciseGroupManager-Objekt und nicht, wie in Zeile 16 initialisiert, einem ExerciseGroupManagerTest-Objekt aufgerufen werden \[-0.25p\]. Typo im Methodennamen checkGroupCapacities() \[-0.25p\]. Die Testfälle 8 und 9 aus HW05 Ex. 2 wurden nicht mit den Eingabeparametern getestet, die ihr in eurer Tabelle angegeben hattet \[-1p\].
