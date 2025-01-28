@@ -15,8 +15,13 @@ Benedikt Zwank 7407699
 | Homework 07 | 4/4      | 3.75/4   | 8/8      | 2/4      | -        | 17.75/20 |
 | Homework 08 | -        | -        | -        | -        | -        | Skipped  |
 | Homework 09 | 4/4      | 8/8      | 7/8      | -        | -        | 19/20    |
+| Homework 10 | 3/3      | 3.5/5    | 11/12    | -        | -        | 17.5/20  |
 
 ### Erläuterungen zur Bewertung
+
+HW10:
+- Ex. 2: Beobachtungen anhand des Issue Boards fehlen \[-1.5p\].
+- Ex. 3 e): Die Entscheidung sollte von euren aus d) abgeleiteten Story Points und der angegebenen Kapazität des Teams von ca. 30 Story Points pro Sprint abhängen. Entweder ihr habt gar keine Story Points vergeben oder die fett gedruckten Tagesanzahlen sollen eure Story Points sein, dann passt das nicht zur Teamkapazität, da ihr lediglich 14 "Tage" bzw. Story Points für den Sprint einplant \[-1p\].
 
 HW09:
 - Ex. 3: Test-Coverage-Datei ist nicht als Artefakt in Pipeline verfügbar \[-1p\].
