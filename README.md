@@ -13,8 +13,13 @@ Benedikt Zwank 7407699
 | Homework 05 | 5/5      | 5.25/7   | 4/8      | -        | -        | 14.25/20 |
 | Homework 06 | 6.5/8    | 7/8      | 4/4      | -        | -        | 17.5/20  |
 | Homework 07 | 4/4      | 3.75/4   | 8/8      | 2/4      | -        | 17.75/20 |
+| Homework 08 | -        | -        | -        | -        | -        | Skipped  |
+| Homework 09 | 4/4      | 8/8      | 7/8      | -        | -        | 19/20    |
 
 ### Erläuterungen zur Bewertung
+
+HW09:
+- Ex. 3: Test-Coverage-Datei ist nicht als Artefakt in Pipeline verfügbar \[-1p\].
 
 HW07:
 - Ex. 2 a): Java ist case-sensitive und JPA erwartet hier eine `@Id`-Annotation, nicht `@ID` \[-0.25p\].
